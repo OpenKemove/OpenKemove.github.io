@@ -13,7 +13,7 @@
   },"2": {
     "doc": "Home",
     "title": "Development status",
-    "content": "Currently, Open Kemove only supports the Snowfox keyboard, but you are welcome to request support for other Kemove models, like the Shadow and Dierya DK61. This project is still under heavy development and in its early stages. What works . | [x] Keyboard over USB | [x] Keyboard over Bluetooth | [x] Basic LED Driver | [ ] Fancy LED Animations | [ ] LED Keyboard Status Indicators (Caps Lock, etc.) | [ ] Multi Profile Support for Bluetooth | [ ] Battery Level Indicator | . ",
+    "content": "Currently, Open Kemove only supports the Snowfox keyboard, but you are welcome to request support for other Kemove models, like the Shadow and Dierya DK61. This project is still under heavy development and in its early stages. What works . | Keyboard over USB | Keyboard over Bluetooth | Basic LED Driver | Fancy LED Animations | LED Keyboard Status Indicators (Caps Lock, etc.) | Multi Profile Support for Bluetooth | Battery Level Indicator | . ",
     "url": "https://openkemove.github.io/#development-status",
     "relUrl": "/#development-status"
   },"3": {
@@ -31,7 +31,7 @@
   },"5": {
     "doc": "Home",
     "title": "Disclaimer",
-    "content": "This software is provided &quot;as is&quot;, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software. ",
+    "content": "This software is provided “as is”, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software. ",
     "url": "https://openkemove.github.io/#disclaimer",
     "relUrl": "/#disclaimer"
   },"6": {
@@ -41,81 +41,81 @@
     "url": "https://openkemove.github.io/",
     "relUrl": "/"
   },"7": {
-    "doc": "How to Install",
+    "doc": "install",
     "title": "How to install",
     "content": " ",
     "url": "https://openkemove.github.io/install/install.html#how-to-install",
     "relUrl": "/install/install.html#how-to-install"
   },"8": {
-    "doc": "How to Install",
+    "doc": "install",
     "title": "Before you begin",
-    "content": "Check your keyboard's PCB version. The current version of Open Kemove only supports keyboards featuring PCB revision 3.0. If you have 1.2 or 1.5, we are working on a port for you (more info about this on our Discord server). To check which version you have, disassemble your keyboard and examine the lower part of the PCB (pic for reference). Have a backup keyboard available. During the disassembly and flashing procedures, you will need to input some keystrokes. Even though an on-screen keyboard will make do, we do not recommend it :D . Follow these steps carefully. Make sure to not skip the step for backing up the original firmware, in case you need to recover your keyboard to its original state. Understand how it works. Please review the How it all works page. In the off chance that things go wrong, at least you will know what to google and how to ask for help. The Discord server is a great place to ask for support, as people are always helpful there. ",
+    "content": "Check your keyboard’s PCB version. The current version of Open Kemove only supports keyboards featuring PCB revision 3.0. If you have 1.2 or 1.5, we are working on a port for you (more info about this on our Discord server). To check which version you have, disassemble your keyboard and examine the lower part of the PCB . Have a backup keyboard available. During the disassembly and flashing procedures, you will need to input some keystrokes. Even though an on-screen keyboard will make do, we do not recommend it :D . Follow these steps carefully. Make sure to not skip the step for backing up the original firmware, in case you need to recover your keyboard to its original state. Understand how it works. Please review the How it all works page. In the off chance that things go wrong, at least you will know what to google and how to ask for help. The Discord server is a great place to ask for support, as people are always helpful there. ",
     "url": "https://openkemove.github.io/install/install.html#before-you-begin",
     "relUrl": "/install/install.html#before-you-begin"
   },"9": {
-    "doc": "How to Install",
+    "doc": "install",
     "title": "Step 1: Set up your environment",
     "content": "We will assume you have Windows 10 and have WSL or WSL2 installed. If not please install that. We will have tags that explain what you need to do differently for certain sections of the instruction. ARM GCC Compiler / Toolchain . This is often a package in your package manager. On Ubuntu this can be done using . sudo apt install gcc-arm-none-eabi binutils-arm-none-eabi make . Git . sudo apt install git . DFU-Tools . For linux users, we strongly recommend the dfu-util tool to flash the firmware. If you run into permission problems you can always create udev rules, or simply run the tool using sudo. sudo apt install dfu-util . NOTE: Do not run this under WSL it will not work. WSL has no USB support as of 2020 . ",
     "url": "https://openkemove.github.io/install/install.html#step-1-set-up-your-environment",
     "relUrl": "/install/install.html#step-1-set-up-your-environment"
   },"10": {
-    "doc": "How to Install",
+    "doc": "install",
     "title": "Step 2: Get the bootloader",
-    "content": "Simply download the version matching your PCB revision from: . Jenkins CI Server Download the lpc_boot_Vxx.bin where xx is your version. For example 1.5 would be 1_5. OR You can build the bootloader yourself . Instructions for building bootloader Clone bootloader repository . git clone https://github.com/OpenKemove/kemove_lpc_dfu.git --recursive --depth=1 . recursive here will tell git to clone all submodules. depth=1 will tell git to not clone history. You can omit this if you planning on developing the firmware. Compile bootloader . cd kemove_lpc_dfu make . Yep, that's it. simple. Hopefully it has successfully built with no errors. You should see a few files under build. Namely lpc_boot_v3/v1_5.bin . ",
+    "content": "Simply download the version matching your PCB revision from: . Jenkins CI Server Download the lpc_boot_Vxx.bin where xx is your version. For example 1.5 would be 1_5. OR You can build the bootloader yourself . Clone bootloader repository . git clone https://github.com/OpenKemove/kemove_lpc_dfu.git --recursive --depth=1 . recursive here will tell git to clone all submodules. depth=1 will tell git to not clone history. You can omit this if you planning on developing the firmware. Compile bootloader . cd kemove_lpc_dfu make . Yep, that’s it. simple. Hopefully it has successfully built with no errors. You should see a few files under build. Namely lpc_boot_v3/v1_5.bin . ",
     "url": "https://openkemove.github.io/install/install.html#step-2-get-the-bootloader",
     "relUrl": "/install/install.html#step-2-get-the-bootloader"
   },"11": {
-    "doc": "How to Install",
+    "doc": "install",
     "title": "Step 3: Build QMK firmware",
     "content": "Clone our QMK Fork . git clone https://github.com/OpenKemove/qmk_firmware.git --recursive --depth=1 . Compile QMK . cd qmk_firmware make kemove/snowfox/v3 . If you have 1.5 please replace v3 with v1_5 . Once this is done, you should see a kemove_snowfox_vxx_default.bin in the directory. ",
     "url": "https://openkemove.github.io/install/install.html#step-3-build-qmk-firmware",
     "relUrl": "/install/install.html#step-3-build-qmk-firmware"
   },"12": {
-    "doc": "How to Install",
+    "doc": "install",
     "title": "Step 4: Disassemble your keyboard",
-    "content": "With your keyboard disconnected from the computer, remove all keycaps and switches using the pullers provided by Kemove. You will also need to remove the 7 screws fixing the PCB to the keyboard's case. These screws have soft heads, so use an adequate sized phillips screwdriver, otherwise you may end up with very difficult to remove dusted screws. When lifting the PCB from the case, gently detach the wire connecting the battery to the back of the PCB. You will have a bare board like the one below. ",
+    "content": "With your keyboard disconnected from the computer, remove all keycaps and switches using the pullers provided by Kemove. You will also need to remove the 7 screws fixing the PCB to the keyboard’s case. These screws have soft heads, so use an adequate sized phillips screwdriver, otherwise you may end up with very difficult to remove dusted screws. When lifting the PCB from the case, gently detach the wire connecting the battery to the back of the PCB. You will have a bare board like the one below. ",
     "url": "https://openkemove.github.io/install/install.html#step-4-disassemble-your-keyboard",
     "relUrl": "/install/install.html#step-4-disassemble-your-keyboard"
   },"13": {
-    "doc": "How to Install",
+    "doc": "install",
     "title": "Step 5: Connect the PCB in flash drive mode",
-    "content": "To execute this step you will need to close a circuit in your PCB using either a resistor (100-1K Ohm is better), a wire or a paper clip, so gather one of these tools. Looking at the PCB's front (the side that swiches would be installed onto), you will find some exposed metal contacts. These are called test points. First locate a test point with the ISP description next to it. Then locate the test points with the GNDx description (where x could be any number). Next, using your resistor, wire or paper clip, connect the ISP metal contact to any one of the GNDx contacts. While holding this connection, plugin the PCB to a computer using the keyboard's USB cable. If you did everything correctly, a new &quot;flash drive&quot; should show up on the computer (and you can drop the wire contacts). Otherwise, you probably did not connect the ISP and GNDx pads properly, so please try again. Below is an example of a rudimentary paper clip connection closing the circuit between the ISP and GND2 test points. ",
+    "content": "To execute this step you will need to close a circuit in your PCB using either a resistor (100-1K Ohm is better), a wire or a paper clip, so gather one of these tools. Looking at the PCB’s front (the side that swiches would be installed onto), you will find some exposed metal contacts. These are called test points. First locate a test point with the ISP description next to it. Then locate the test points with the GNDx description (where x could be any number). Next, using your resistor, wire or paper clip, connect the ISP metal contact to any one of the GNDx contacts. While holding this connection, plugin the PCB to a computer using the keyboard’s USB cable. If you did everything correctly, a new “flash drive” should show up on the computer (and you can drop the wire contacts). Otherwise, you probably did not connect the ISP and GNDx pads properly, so please try again. Below is an example of a rudimentary paper clip connection closing the circuit between the ISP and GND2 test points. ",
     "url": "https://openkemove.github.io/install/install.html#step-5-connect-the-pcb-in-flash-drive-mode",
     "relUrl": "/install/install.html#step-5-connect-the-pcb-in-flash-drive-mode"
   },"14": {
-    "doc": "How to Install",
+    "doc": "install",
     "title": "Step 6: Backup original firmware and place bootloader",
-    "content": "Attention Linux users: This step might require using a Windows machine or VM, or MacOS, as it often have problems on Linux. But feel free to also try the MacOS steps at the end of this section. With the PCB connected as a &quot;flash drive&quot;, open it in Explorer and locate the firmware.bin file. This is the original firmware provided by Kemove and it should be 64 KB in size. Copy this file to a safe place in your computer, as you will revert to this backup in case anything goes wrong during the flashing procedure. After certifying that you backed up the original firmware, delete the firmware.bin file from the &quot;flash drive&quot;. Then copy the lpc_boot.bin bootloader file that you compiled in step 1 to the &quot;flash drive&quot;. There is no need to rename it. Once you are done with that, unplug the PCB from the computer. Place a single switch in the ESC key slot and hold it down while replugging the board to the computer. This will trigger Device Firmware Upgrade (DFU) mode and, if you check your computer's Device Manager/lsusb, you should see a new DFU device in there. Instructions for MacOS users . Please DO NOT open the flash drive in Finder. Instead, complete the operation using the command line interface. You can do this with the following steps: . | Wait for the drive icon to show up in desktop. | Open a terminal | cd (space after cd) then drag the drive icon into your terminal. It should fill in the path. Then press enter. | rm -rf firmware.bin sync . | cp PATH_TO_LPC_BOOT.BIN . (You can do the drag and drop thing as well for lpc_boot.bin) | sync | diskutil list, then find the diskX where X is a number which contains the flash drive. | diskutil unmountDisk diskX this is the diskX you found in the previous step. | . ",
+    "content": "Attention Linux users: This step might require using a Windows machine or VM, or MacOS, as it often have problems on Linux. But feel free to also try the MacOS steps at the end of this section. With the PCB connected as a “flash drive”, open it in Explorer and locate the firmware.bin file. This is the original firmware provided by Kemove and it should be 64 KB in size. Copy this file to a safe place in your computer, as you will revert to this backup in case anything goes wrong during the flashing procedure. After certifying that you backed up the original firmware, delete the firmware.bin file from the “flash drive”. Then copy the lpc_boot.bin bootloader file that you compiled in step 1 to the “flash drive”. There is no need to rename it. Once you are done with that, unplug the PCB from the computer. Place a single switch in the ESC key slot and hold it down while replugging the board to the computer. This will trigger Device Firmware Upgrade (DFU) mode and, if you check your computer’s Device Manager/lsusb, you should see a new DFU device in there. Instructions for MacOS users . Please DO NOT open the flash drive in Finder. Instead, complete the operation using the command line interface. You can do this with the following steps: . | Wait for the drive icon to show up in desktop. | Open a terminal | cd (space after cd) then drag the drive icon into your terminal. It should fill in the path. Then press enter. | rm -rf firmware.bin sync . | cp PATH_TO_LPC_BOOT.BIN . (You can do the drag and drop thing as well for lpc_boot.bin) | sync | diskutil list, then find the diskX where X is a number which contains the flash drive. | diskutil unmountDisk diskX this is the diskX you found in the previous step. | . ",
     "url": "https://openkemove.github.io/install/install.html#step-6-backup-original-firmware-and-place-bootloader",
     "relUrl": "/install/install.html#step-6-backup-original-firmware-and-place-bootloader"
   },"15": {
-    "doc": "How to Install",
+    "doc": "install",
     "title": "Step 7: Flash QMK!",
     "content": "Now we can use dfu-util to flash the device. Run dfu-util in the qmk_firmware directory. Make sure it can detect the device. You can verify this by running. Check for the pair feed:6969. Note: Windows Users Please follow This Guide on how to install the generic libusb driver . dfu-util -l . you should see something like this: . dfu-util 0.9 Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc. Copyright 2010-2016 Tormod Volden and Stefan Schmidt This program is Free Software and has ABSOLUTELY NO WARRANTY Please report bugs to http://sourceforge.net/p/dfu-util/tickets/ Found DFU: [feed:6969] ver=0200, devnum=4, cfg=1, intf=0, path=\"1-12\", alt=0, name=\"UNKNOWN\", serial=\"604\" . Then you can flash the firmware by using . dfu-util -d feed:6969 -D kemove_snowfox_vxx_default.bin . If you run into any error, please try connecting the keyboard directly to the computer without any HUB etc. Or just try a few times. Remeber to unplug / replug (while holding esc) between tries. Once it is done, you board should be running QMK. (you might need to unplug / replug) for it to boot QMK. The auto boot works most of the time but occasionally seems buggy. ",
     "url": "https://openkemove.github.io/install/install.html#step-7-flash-qmk",
     "relUrl": "/install/install.html#step-7-flash-qmk"
   },"16": {
-    "doc": "How to Install",
-    "title": "How to Install",
+    "doc": "install",
+    "title": "install",
     "content": " ",
     "url": "https://openkemove.github.io/install/install.html",
     "relUrl": "/install/install.html"
   },"17": {
     "doc": "How it all works",
     "title": "Kemove Snofox Hardware",
-    "content": "If you take apart the board, and on the back of the PCB we can see a few Integrated Circuits (ICs). We will go over them one by one. With the battery connector facing up, we can see on the bottom there are the main controller on the right. It is an NXP LPC11U35/401. It is an ARM Cortex-M0 micro-controller running at 48Mhz. This is the &quot;brain&quot; of the keyboard. It handles matrix scanning (this is how the keyboard is able to tell what switch is currently being pressed), USB Communication, and talks to the LED controllers to set LED brightness and color. Next to the left, on the green board that is soldered down, it is the Bluetooth module. At its core it is a BCM20730 (CYW20730). It is also an ARM controller, but with bluetooth capability. However the programming interface of this chip is not the standard ARM SWD interface, and in fact a bluetooth firmware could be quite complicated, thus we will not be touching it at this moment. ",
+    "content": "If you take apart the board, and on the back of the PCB we can see a few Integrated Circuits (ICs). We will go over them one by one. With the battery connector facing up, we can see on the bottom there are the main controller on the right. It is an NXP LPC11U35/401. It is an ARM Cortex-M0 micro-controller running at 48Mhz. This is the “brain” of the keyboard. It handles matrix scanning (this is how the keyboard is able to tell what switch is currently being pressed), USB Communication, and talks to the LED controllers to set LED brightness and color. Next to the left, on the green board that is soldered down, it is the Bluetooth module. At its core it is a BCM20730 (CYW20730). It is also an ARM controller, but with bluetooth capability. However the programming interface of this chip is not the standard ARM SWD interface, and in fact a bluetooth firmware could be quite complicated, thus we will not be touching it at this moment. ",
     "url": "https://openkemove.github.io/install/theory.html#kemove-snofox-hardware",
     "relUrl": "/install/theory.html#kemove-snofox-hardware"
   },"18": {
     "doc": "How it all works",
     "title": "Software: Main Controller (MCU)",
-    "content": "We are mostly interested in replacing the firmware on the main controller. Usually firmware on these ARM based controller can be updated using a debugger that supports the ARM SWD (Serial Wire Debug) interface. E.g. J-Link, ST-Link. However this is quite annoying if the user has to update the firmware like in the case of the keyboard. So often these devices actually run two firmware on it, one is the main firmware that implements the function of the device, this our case the keyboard; and another firmware act as an update tool for the other firmware, we often call this bootloader. This bootloader can range from simple to complicated, and can be very generic or very specific to what kind of firmware it can accept. The one came with the kemove board doesn't seem to have a way for us to &quot;force&quot; it into the update mode. This is rather undesireable because we would like to have the ability to recover even if the main firmware is completely dead or misbehaving. For that reason, we will be replacing both the firmware and the bootloader on the keyboard. ",
+    "content": "We are mostly interested in replacing the firmware on the main controller. Usually firmware on these ARM based controller can be updated using a debugger that supports the ARM SWD (Serial Wire Debug) interface. E.g. J-Link, ST-Link. However this is quite annoying if the user has to update the firmware like in the case of the keyboard. So often these devices actually run two firmware on it, one is the main firmware that implements the function of the device, this our case the keyboard; and another firmware act as an update tool for the other firmware, we often call this bootloader. This bootloader can range from simple to complicated, and can be very generic or very specific to what kind of firmware it can accept. The one came with the kemove board doesn’t seem to have a way for us to “force” it into the update mode. This is rather undesireable because we would like to have the ability to recover even if the main firmware is completely dead or misbehaving. For that reason, we will be replacing both the firmware and the bootloader on the keyboard. ",
     "url": "https://openkemove.github.io/install/theory.html#software-main-controller-mcu",
     "relUrl": "/install/theory.html#software-main-controller-mcu"
   },"19": {
     "doc": "How it all works",
     "title": "Replacing the bootloader",
-    "content": "You might ask, how would one replace the bootloader without a programmer? Fortunately for us, the LPC11U35 has a built in update mode where it will present itself as a USB-MSD device (USB Mass Storage). Put it more plainly, this will make the controller show up as a &quot;Flash Drive&quot; on you computer. And you just need to copy the firmware in and out of it to flash it! . So we will flash the bootloader this way. ",
+    "content": "You might ask, how would one replace the bootloader without a programmer? Fortunately for us, the LPC11U35 has a built in update mode where it will present itself as a USB-MSD device (USB Mass Storage). Put it more plainly, this will make the controller show up as a “Flash Drive” on you computer. And you just need to copy the firmware in and out of it to flash it! . So we will flash the bootloader this way. ",
     "url": "https://openkemove.github.io/install/theory.html#replacing-the-bootloader",
     "relUrl": "/install/theory.html#replacing-the-bootloader"
   },"20": {
